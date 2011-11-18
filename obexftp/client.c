@@ -509,6 +509,8 @@ obexftp_client_t *obexftp_open(int transport, /*const*/ obex_ctrans_t *ctrans, o
 
 	OBEX_SetUserData(cli->obexhandle, cli);
 	
+	OBEX_SetTransportMTU(cli->obexhandle, OBEX_MAXIMUM_MTU, OBEX_MAXIMUM_MTU );
+	
 	/* Buffer for body */
 	cli->stream_chunk = malloc(STREAM_CHUNK);
 	if(cli->stream_chunk == NULL) {

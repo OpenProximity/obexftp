@@ -52,7 +52,7 @@ enum {
 };
 
 /** Number of bytes passed at one time to OBEX. */
-#define STREAM_CHUNK 4096
+#define STREAM_CHUNK 65535
 
 /* bt svclass */
 #define OBEX_SYNC_SERVICE	0x1104
